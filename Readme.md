@@ -4,6 +4,13 @@ Lo script **fds_watching.py** si preoccuperà di inviare un email al destinatari
 Il file **config.ini**
 
 <code>
+    [SMTP]<br />
+    name_server = smtp.yourprovider.com<br />
+    port = 587<br />
+    username = yourusername<br />
+    password = yourpassword<br />
+</code><br />
+<code>
     [Sender]<br />
     name = INFO FSE ITALIA<br />
     email = your.email@tua-azienda.com<br />
@@ -18,6 +25,8 @@ Il file **config.ini**
     file_name = Test_T2_20_BD_20_02.fds<br />
     num_core = 6<br />
 </code><br />
+
+Alla voce *[SMTP]* si imposta il nome del server SMTP, la porta (587 di default) e le credenziali per poter spedire il messaggio di posta
 
 Alla voce *[Sender]* si indica l'intestazione dell'email di provenienza.
 

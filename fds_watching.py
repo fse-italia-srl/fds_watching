@@ -14,6 +14,10 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 # Access values from the configuration file
+name_server = config.get('SMTP', 'name_server')
+port = config.get('SMTP', 'port')
+username = config.get('SMTP', 'username')
+password = config.get('SMTP', 'password')
 sender = config.get('Sender', 'name')
 email_sender = config.get('Sender', 'email')
 dest = config.get('Destination', 'name')
@@ -94,11 +98,11 @@ Lo Staff di\n FSE Italia Srl\n
 
 
 
-server = smtplib.SMTP("smtp.fseitalia.com", 587)
+server = smtplib.SMTP(name_server, int(port))
 server.ehlo()
 server.starttls()
 server.ehlo()
-server.login("mailsender@fseitalia.com", "bG!eMDc68zhvqbU")
+server.login(username, password)
 server.set_debuglevel(1)  ## Questa istruzione consente di visualizzare l'esito dell'invio dell'e-mail
 
 ## Questa istruzione invia l'email a fine lavoro e il metodo 'quite()' chiude la connessione al server di posta in uscita
