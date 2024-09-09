@@ -25,4 +25,4 @@ Alla voce *[Destination]* si indica l'email del destinatario
 
 Alla voce *[File]* si indica il file (con il suo percorso) e il numero di core da utilizzare per questa simulazione.
 
-**ATTENZIONE**: sul server Windows deve essere installato FDS (https://www.nist.gov/services-resources/software/fds-and-smokeview) e Python3 (https://www.python.org/downloads/)
+**ATTENZIONE**: sul server Windows deve essere installato FDS (https://pages.nist.gov/fds-smv/downloads.html) e Python3 (https://www.python.org/downloads/)
