@@ -1,4 +1,4 @@
-Questo scritp in Python consente di lanciare da un server Windows remoto una simulazione FDS (https://www.nist.gov/services-resources/software/fds-and-smokeview) e controllare l'output che lo stesso FDS produce. 
+Questo scritp in Python consente di lanciare da un server Windows remoto una simulazione FDS (https://pages.nist.gov/fds-smv/downloads.html) e controllare l'output che lo stesso FDS produce. 
 Lo script **fds_watching.py** si preoccuperà di inviare un email al destinatario indicato nel file config.ini con l'esito della simulazione.
 
 Il file **config.ini**
@@ -24,3 +24,5 @@ Alla voce *[Sender]* si indica l'intestazione dell'email di provenienza.
 Alla voce *[Destination]* si indica l'email del destinatario
 
 Alla voce *[File]* si indica il file (con il suo percorso) e il numero di core da utilizzare per questa simulazione.
+
+**ATTENZIONE**: sul server Windows deve essere installato FDS (https://www.nist.gov/services-resources/software/fds-and-smokeview) e Python3 (https://www.python.org/downloads/)
