@@ -15,6 +15,7 @@ config.read('config.ini')
 
 # Access values from the configuration file
 sender = config.get('Sender', 'name')
+email_sender = config.get('Sender', 'email')
 dest = config.get('Destination', 'name')
 email = config.get('Destination', 'email')
 nome_server = s.getsockname()[0]
@@ -23,7 +24,7 @@ num_core = config.get('File', 'num_core')
 
 ## Imposta alcune variabili per l'invio della email
 sent_subject = f"Questa e-mail ti consente di sapere come sta andando la tua simulazione su {nome_server}!"
-sent_from = f"{sender} <mailsender@fseitalia.com>"
+sent_from = f"{sender} <{email_sender}>"
 sent_to = [email]
 
 
